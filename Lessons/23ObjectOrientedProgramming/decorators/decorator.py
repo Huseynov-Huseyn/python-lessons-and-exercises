@@ -23,7 +23,7 @@ def add_fudge(func):
 @add_sprinkles
 @add_fudge
 def get_ice_cream(flavor):
-    print(f"Here is your{flavor} ice cream!")
+    print(f"Here is your {flavor} ice cream!")
 
 
 get_ice_cream("Creamy")

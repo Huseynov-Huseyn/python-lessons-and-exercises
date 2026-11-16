@@ -7,5 +7,5 @@ from Dog import Dog
 
 Animals = [Car(), Cat(), Dog()]
 for animal in Animals:
-    print(animal.speak())
+    animal.speak()
     print(animal.is_alive)

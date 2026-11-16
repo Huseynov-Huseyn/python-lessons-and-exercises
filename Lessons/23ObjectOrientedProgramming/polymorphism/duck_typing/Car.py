@@ -1,5 +1,5 @@
 class Car:
     def speak(self):
-        print("Hunk!")
+        print("Honk!")
 
     is_alive = True
