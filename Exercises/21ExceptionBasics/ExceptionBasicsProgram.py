@@ -78,7 +78,73 @@ SELF-CHECK
 
 # Write ALL your code below this line.
 def main():
-    pass
+    try:
+        number = parse_age("25")
+    except ValueError as e:
+        print(e)
+    else:
+        print(number)
+    finally:
+        print("Check finished.")
+
+    try:
+        number = parse_age("abc")
+    except ValueError as e:
+        print(e)
+    else:
+        print(number)
+    finally:
+        print("Check finished.")
+
+    try:
+        number = parse_age("150")
+    except ValueError as e:
+        print(e)
+    else:
+        print(number)
+    finally:
+        print("Check finished.")
+
+    try:
+        number = parse_age("-3")
+    except ValueError as e:
+        print(e)
+    else:
+        print(number)
+    finally:
+        print("Check finished.")
+
+    try:
+        phone1 = check_phone("+994501234567")
+    except ValueError as e:
+        print(e)
+    else:
+        print(phone1)
+    finally:
+        print("Check finished.")
+
+    try:
+        phone1 = check_phone("0501234567")
+    except ValueError as e:
+        print(e)
+    else:
+        print(phone1)
+    finally:
+        print("Check finished.")
+
+
+def parse_age(text):
+    number_text = int(text)
+    if number_text > 120 or number_text < 0:
+        raise ValueError(f"Age must be between 0 and 120, given: {number_text}")
+    return number_text
+
+
+def check_phone(phone):
+    if phone.startswith("+994") and len(phone) == 13:
+        return True
+    else:
+        raise ValueError("The number must start with '+994' and its length must be 13.")
 
 
 if __name__ == '__main__':
