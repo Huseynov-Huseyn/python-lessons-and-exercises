@@ -83,10 +83,69 @@ SELF-CHECK
 ================================================================================
 """
 
-
+from InvalidGradeError import InvalidGradeError
 # Write ALL your code below this line.
+from Student import Student
+
+
 def main():
-    pass
+    s1 = Student("Huseyn", 85)
+    print(s1)
+    try:
+        s2 = Student("Muhammed", 125)
+    except InvalidGradeError as e:
+        print(e)
+    except ValueError as e:
+        print(e)
+    except Exception as e:
+        print(e)
+    finally:
+        print("Done.")
+
+    try:
+        s2 = Student("Muhammed", 90)
+        s2.grade = -5
+    except InvalidGradeError as e:
+        print(e)
+    except ValueError as e:
+        print(e)
+    except Exception as e:
+        print(e)
+    finally:
+        print("Done.")
+
+    try:
+        s2 = Student.from_string("Huseyn-95")
+    except InvalidGradeError as e:
+        print(e)
+    except ValueError as e:
+        print(e)
+    except Exception as e:
+        print(e)
+    finally:
+        print("Done.")
+
+    try:
+        s2 = Student.from_string("Huseyn95")
+    except InvalidGradeError as e:
+        print(e)
+    except ValueError as e:
+        print(e)
+    except Exception as e:
+        print(e)
+    finally:
+        print("Done.")
+
+    try:
+        s2 = Student.from_string("Huseyn-as")
+    except InvalidGradeError as e:
+        print(e)
+    except ValueError as e:
+        print(e)
+    except Exception as e:
+        print(e)
+    finally:
+        print("Done.")
 
 
 if __name__ == '__main__':
