@@ -26,7 +26,7 @@ Account.py
 SavingAccount.py
 CheckingAccount.py
 Bank.py
-BankProgram.py
+main.py
 
 
 RULES USED THROUGHOUT THE PROJECT
@@ -220,7 +220,7 @@ Only start this step after Account has `transfer_out()` and `transfer_in()`.
 
 STEP 7 — WRITE THE CONSOLE MENU
 ===============================
-File: BankProgram.py
+File: main.py
 
 1. Import Bank and the bank exception base class.
 2. At startup, create a Bank containing two demo accounts using the
